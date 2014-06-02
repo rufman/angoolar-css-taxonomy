@@ -1,0 +1,16 @@
+{
+  "name": "angoolar-css-taxonomy",
+  "version": "0.0.0",
+  "authors": [
+    "Olen Davis <spelledlikeitsounds@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "docs",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
