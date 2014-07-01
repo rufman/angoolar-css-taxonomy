@@ -1,0 +1,21 @@
+@mixin spin {
+	&, &[class^="icon-"]:before, &[class*=" icon-"]:before {
+		@include my-animation( $name: $class-spin, $timing-function: linear, $iteration-count: infinite, $duration: 2s );
+	}
+}
+
+@mixin fade-out {
+	@include my-animation( $name: $class-fade-out, $duration: $default-animation-duration );
+
+	&.#{ $class-very-slowly } {
+		@include my-animation( $name: $class-fade-out, $duration: $default-animation-duration * 10 );
+	}
+}
+
+@mixin fade-in {
+	@include my-animation( $name: $class-fade-in, $duration: $default-animation-duration );
+
+	&.#{ $class-very-slowly } {
+		@include my-animation( $name: $class-fade-in, $duration: $default-animation-duration * 10 );
+	}
+}

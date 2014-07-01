@@ -1,0 +1,14 @@
+@include keyframes-spin;
+.#{ $class-spin } {
+	@include spin;
+}
+
+@include keyframes-fade-out;
+.#{ $class-fade-out } {
+	@include fade-out;
+}
+
+@include keyframes-fade-in;
+.#{ $class-fade-in } {
+	@include fade-in;
+}

@@ -271,6 +271,9 @@ $default-style-spec-sheer-coloring       : make-style-spec(( with-fully-qualifie
 $default-style-spec-barely-sheer-coloring: make-style-spec(( with-fully-qualified: true, with-inverse: true, with-secondary: true )) !global !default;
 $default-style-spec-mostly-sheer-coloring: make-style-spec(( with-fully-qualified: true, with-inverse: true, with-secondary: true )) !global !default;
 $default-style-spec-flip-clock-wrapper   : null !global !default;
+$default-style-spec-lighter-coloring     : make-style-spec(( with-fully-qualified: true, with-inverse: true, with-secondary: true )) !global !default;
+$default-style-spec-spin     : make-style-spec(( with-fully-qualified: false, with-inverse: false, with-secondary: false )) !global !default;
+
 
 @function make-default-style-specs( $args: () ) {
 	$style-specs: (
@@ -425,6 +428,8 @@ $default-style-spec-flip-clock-wrapper   : null !global !default;
 		barely-sheer-coloring      : $default-style-spec-barely-sheer-coloring,
 		mostly-sheer-coloring      : $default-style-spec-mostly-sheer-coloring,
 		flip-clock-wrapper         : $default-style-spec-flip-clock-wrapper,
+		lighter-coloring           : $default-style-spec-lighter-coloring,
+		spin           : $default-style-spec-spin,
 	);
 	@if $args {
 		$style-specs: map-merge( $style-specs, $args );
@@ -612,6 +617,8 @@ $style-spec-classifications: (
 		sheer-coloring             : ( id: 148, basicness: 1, customizability: 2, description: "makes the element's background a mostly opaque version of the theme's light secondary color, and makes the color whichever of the theme's light and dark primary colors that provides the highest contrast with the background" ),
 		barely-sheer-coloring      : ( id: 149, basicness: 1, customizability: 2, description: "makes the element's background a barely transparent version of the theme's light secondary color, and makes the color whichever of the theme's light and dark primary colors that provides the highest contrast with the background" ),
 		mostly-sheer-coloring      : ( id: 150, basicness: 1, customizability: 2, description: "makes the element's background a mostly transparent version of the theme's light secondary color, and makes the color whichever of the theme's light and dark primary colors that provides the highest contrast with the background" ),
+		lighter-coloring           : ( id: 151, basicness: 1, customizability: 2, description: "makes the element's background that of the theme's light secondary color, and makes the color whichever of the theme's light and dark primary colors that provides the highest contrast with the background" ),
+		spin           : ( id: 151, basicness: 1, customizability: 2, description: "makes the element's background that of the theme's light secondary color, and makes the color whichever of the theme's light and dark primary colors that provides the highest contrast with the background" ),
 ) !global;
 
 //////////////////////////////////////////////////////////////////////////////////////////
