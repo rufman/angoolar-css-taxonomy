@@ -969,6 +969,9 @@
 @mixin text-input {
 	margin: 0px;
 	border: none;
+	border-radius: 0;
+	padding: 0;
+	font-family: map-get( map-get( $current-theme, text-styles ), base-font-family   );
 	@include appearance-none;
 	@include border-box;
 
