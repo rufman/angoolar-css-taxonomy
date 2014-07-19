@@ -22,6 +22,7 @@ $current-secondary: false !global;
 
 @mixin declare-style( $style ) {
 	@if $current-style-spec {
+		@if $style == 'text-input'                  { @if mixin-exists( declare-#{ $style } ) { @include declare-text-input;                  } @else if mixin-exists( $style ) { @include declare-specified-style { @include text-input;                  } } }
 		@if $style == 'above'                       { @if mixin-exists( declare-#{ $style } ) { @include declare-above;                       } @else if mixin-exists( $style ) { @include declare-specified-style { @include above;                       } } }
 		@if $style == 'absolute'                    { @if mixin-exists( declare-#{ $style } ) { @include declare-absolute;                    } @else if mixin-exists( $style ) { @include declare-specified-style { @include absolute;                    } } }
 		@if $style == 'appearance-none'             { @if mixin-exists( declare-#{ $style } ) { @include declare-appearance-none;             } @else if mixin-exists( $style ) { @include declare-specified-style { @include appearance-none;             } } }
@@ -146,7 +147,6 @@ $current-secondary: false !global;
 		@if $style == 'tb-padded'                   { @if mixin-exists( declare-#{ $style } ) { @include declare-tb-padded;                   } @else if mixin-exists( $style ) { @include declare-specified-style { @include tb-padded;                   } } }
 		@if $style == 'text-center'                 { @if mixin-exists( declare-#{ $style } ) { @include declare-text-center;                 } @else if mixin-exists( $style ) { @include declare-specified-style { @include text-center;                 } } }
 		@if $style == 'text-coloring'               { @if mixin-exists( declare-#{ $style } ) { @include declare-text-coloring;               } @else if mixin-exists( $style ) { @include declare-specified-style { @include text-coloring;               } } }
-		@if $style == 'text-input'                  { @if mixin-exists( declare-#{ $style } ) { @include declare-text-input;                  } @else if mixin-exists( $style ) { @include declare-specified-style { @include text-input;                  } } }
 		@if $style == 'text-justify'                { @if mixin-exists( declare-#{ $style } ) { @include declare-text-justify;                } @else if mixin-exists( $style ) { @include declare-specified-style { @include text-justify;                } } }
 		@if $style == 'text-left'                   { @if mixin-exists( declare-#{ $style } ) { @include declare-text-left;                   } @else if mixin-exists( $style ) { @include declare-specified-style { @include text-left;                   } } }
 		@if $style == 'text-right'                  { @if mixin-exists( declare-#{ $style } ) { @include declare-text-right;                  } @else if mixin-exists( $style ) { @include declare-specified-style { @include text-right;                  } } }
@@ -175,7 +175,8 @@ $current-secondary: false !global;
 		@if $style == 'wide'                        { @if mixin-exists( declare-#{ $style } ) { @include declare-wide;                        } @else if mixin-exists( $style ) { @include declare-specified-style { @include wide;                        } } }
 		@if $style == 'wrap'                        { @if mixin-exists( declare-#{ $style } ) { @include declare-wrap;                        } @else if mixin-exists( $style ) { @include declare-specified-style { @include wrap;                        } } }
 		@if $style == 'lighter-coloring'            { @if mixin-exists( declare-#{ $style } ) { @include declare-lighter-coloring;            } @else if mixin-exists( $style ) { @include declare-specified-style { @include lighter-coloring;            } } }
-		@if $style == 'spin'            { @if mixin-exists( declare-#{ $style } ) { @include declare-spin;            } @else if mixin-exists( $style ) { @include declare-specified-style { @include spin;            } } }
+		@if $style == 'spin'                        { @if mixin-exists( declare-#{ $style } ) { @include declare-spin;            } @else if mixin-exists( $style ) { @include declare-specified-style { @include spin;            } } }
+		@if $style == 'medium-weight'               { @if mixin-exists( declare-#{ $style } ) { @include declare-medium-weight;            } @else if mixin-exists( $style ) { @include declare-specified-style { @include medium-weight;            } } }
 	}
 }
 

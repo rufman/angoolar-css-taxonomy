@@ -85,7 +85,7 @@ $default-with-when-mobile    : false !global !default;
 
 $default-ratio-from     : 2 !global !default;
 $default-ratio-to       : 3 !global !default;
-$default-spacing-factors: ( less: .5, more: 2, way-more: 4 ) !global !default;
+$default-spacing-factors: ( less: .5, more: 1.5, way-more: 2 ) !global !default;
 
 $default-style-spec-vertical-rhythm-text-styles: make-style-spec() !global !default;
 $default-style-spec-appearance-none            : make-style-spec() !global !default;//make-style-spec(( class-name: $class-appearance-none             )) !global !default;
@@ -272,11 +272,13 @@ $default-style-spec-barely-sheer-coloring: make-style-spec(( with-fully-qualifie
 $default-style-spec-mostly-sheer-coloring: make-style-spec(( with-fully-qualified: true, with-inverse: true, with-secondary: true )) !global !default;
 $default-style-spec-flip-clock-wrapper   : null !global !default;
 $default-style-spec-lighter-coloring     : make-style-spec(( with-fully-qualified: true, with-inverse: true, with-secondary: true )) !global !default;
-$default-style-spec-spin     : make-style-spec(( with-fully-qualified: false, with-inverse: false, with-secondary: false )) !global !default;
+$default-style-spec-spin                 : make-style-spec(( with-fully-qualified: false, with-inverse: false, with-secondary: false )) !global !default;
+$default-style-spec-medium-weight        : make-style-spec() !global !default;
 
 
 @function make-default-style-specs( $args: () ) {
 	$style-specs: (
+		text-input                 : $default-style-spec-text-input,
 		vertical-rhythm-text-styles: $default-style-spec-vertical-rhythm-text-styles,
 		appearance-none            : $default-style-spec-appearance-none,
 		hardware-render            : $default-style-spec-hardware-render,
@@ -412,7 +414,6 @@ $default-style-spec-spin     : make-style-spec(( with-fully-qualified: false, wi
 		trb-bordered               : $default-style-spec-trb-bordered,
 		blt-bordered               : $default-style-spec-blt-bordered,
 		transparent-border         : $default-style-spec-transparent-border,
-		text-input                 : $default-style-spec-text-input,
 		select                     : $default-style-spec-select,
 		button                     : $default-style-spec-button,
 		shallow-button             : $default-style-spec-shallow-button,
@@ -429,7 +430,8 @@ $default-style-spec-spin     : make-style-spec(( with-fully-qualified: false, wi
 		mostly-sheer-coloring      : $default-style-spec-mostly-sheer-coloring,
 		flip-clock-wrapper         : $default-style-spec-flip-clock-wrapper,
 		lighter-coloring           : $default-style-spec-lighter-coloring,
-		spin           : $default-style-spec-spin,
+		spin                       : $default-style-spec-spin,
+		medium-weight              : $default-style-spec-medium-weight,
 	);
 	@if $args {
 		$style-specs: map-merge( $style-specs, $args );
@@ -618,7 +620,8 @@ $style-spec-classifications: (
 		barely-sheer-coloring      : ( id: 149, basicness: 1, customizability: 2, description: "makes the element's background a barely transparent version of the theme's light secondary color, and makes the color whichever of the theme's light and dark primary colors that provides the highest contrast with the background" ),
 		mostly-sheer-coloring      : ( id: 150, basicness: 1, customizability: 2, description: "makes the element's background a mostly transparent version of the theme's light secondary color, and makes the color whichever of the theme's light and dark primary colors that provides the highest contrast with the background" ),
 		lighter-coloring           : ( id: 151, basicness: 1, customizability: 2, description: "makes the element's background that of the theme's light secondary color, and makes the color whichever of the theme's light and dark primary colors that provides the highest contrast with the background" ),
-		spin           : ( id: 151, basicness: 1, customizability: 2, description: "makes the element's background that of the theme's light secondary color, and makes the color whichever of the theme's light and dark primary colors that provides the highest contrast with the background" ),
+		spin                       : ( id: 152, basicness: 1, customizability: 2, description: "makes the element spin in a circle counter clockwise" ),
+		medium-weight              : ( id: 153, basicness: 1, customizability: 2, description: "makes font weight medium" ),
 ) !global;
 
 //////////////////////////////////////////////////////////////////////////////////////////
