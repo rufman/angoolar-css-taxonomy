@@ -358,6 +358,10 @@
 	font-weight: 300;
 }
 
+@mixin medium-weight {
+	font-weight: 500;
+}
+
 @mixin normal-weight {
 	font-weight: normal;
 }
