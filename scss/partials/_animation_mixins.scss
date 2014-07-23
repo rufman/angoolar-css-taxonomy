@@ -7,7 +7,7 @@
 		$transition-duration: $duration;
 		&.#{ $class-fast } { $transition-duration: $fast-duration; }
 		&.#{ $class-slow } { $transition-duration: $slow-duration; }
-		@include my-animation( $name: $class-spin, $timing-function: linear, $iteration-count: infinite, $duration: $transition-duration );
+		@include my-animation( $name: $class-spin, $timing-function: linear, $iteration-count: infinite, $duration: $transition-duration * 2 );
 	}
 }
 
