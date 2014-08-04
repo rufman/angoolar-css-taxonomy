@@ -672,6 +672,7 @@
 ////////////////////////////////////////////
 
 //////////////////////// ROUNDED BORDERS
+@mixin more-rounded(    $radius: map-get( map-get( $current-theme, borders ), radius ) * 3.33 ) { @include border-radius(              $radius ); }
 @mixin rounded(    $radius: map-get( map-get( $current-theme, borders ), radius ) ) { @include border-radius(              $radius ); }
 @mixin t-rounded(  $radius: map-get( map-get( $current-theme, borders ), radius ) ) { @include border-top-radius(          $radius ); }
 @mixin r-rounded(  $radius: map-get( map-get( $current-theme, borders ), radius ) ) { @include border-right-radius(        $radius ); }
